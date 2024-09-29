@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Image Gallery</title>
+</head>
+
+<body>
+    <!-- Heading Name -->
+    <div class="heading">
+        <h1>Image Gallery</h1>
+    </div>
+
+    <!-- Image Gallery section all images in one div -->
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src=
+"img/blog-2.jpeg"
+                onclick="openModal(
+'img/blog-2.jpeg')"
+                alt="Image 1">
+        </div>
+        <div class="gallery-item">
+            <img src=
+"img/100.jpeg"
+                onclick="openModal(
+'img/100.jpeg')"
+                alt="Image 2">
+        </div>
+        <div class="gallery-item">
+            <img src=
+"img/10000.jpeg"
+                onclick="openModal(
+'img/10000.jpeg')"
+                alt="Image 3">
+        </div>
+        <div class="gallery-item">
+            <img src=
+"img/about-1.jpeg"
+                onclick="openModal(
+'img/about-1.jpeg')"
+                alt="Image 4">
+        </div>
+        <div class="gallery-item">
+            <img src=
+"img/about-2.jpeg"
+                onclick="openModal(
+'img/about-2.jpeg')"
+                alt="Image 5">
+        </div>
+        <div class="gallery-item">
+            <img src=
+"img/about.jpeg"
+                onclick="openModal(
+'img/about.jpeg')"
+                alt="Image 6">
+        </div>
+        <div class="gallery-item">
+            <img src=
+"img/blog-100x100.jpeg"
+                onclick="openModal(
+'img/blog-100x100.jpeg')"
+                alt="Image 7">
+        </div>
+        <div class="gallery-item">
+            <img src=
+"img/blog-3.jpeg"
+                onclick="openModal(
+'img/blog-3.jpeg')"
+                alt="Image 8">
+        </div>
+    </div>
+
+    <!-- Modal for Image Display -->
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <!-- JavaScript for Modal -->
+    <script>
+        function openModal(src) {
+            document.getElementById("modalImage").src = src;
+            document.getElementById("myModal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+    </script>
+</body>
+
+</html>
